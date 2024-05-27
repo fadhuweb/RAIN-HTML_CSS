@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football Academy</title>
+    <style>
+        /*... existing CSS styles... */
+    </style>
+    <script>
+        window.onload = function() {
+            var playerImages = document.querySelectorAll('.players img');
+
+            playerImages.forEach(function(image) {
+                image.addEventListener('click', function() {
+                    var modal = document.createElement('div');
+                    modal.classList.add('modal');
+
+                    var modalImage = document.createElement('img');
+                    modalImage.src = image.src;
+
+                    var closeButton = document.createElement('button');
+                    closeButton.textContent = 'Close';
+                    closeButton.addEventListener('click', function() {
+                        modal.remove();
+                    });
+
+                    modal.appendChild(modalImage);
+                    modal.appendChild(closeButton);
+                    document.body.appendChild(modal);
+                });
+            });
+        };
+    </script>
+</head>
+<body>
+    <!--... existing HTML structure... -->
+
+    <div class="players">
+        <img src="C:\Users\fadhl\Downloads\john doe.jpg" alt="Player 1">
+        <!--... other player details... -->
+    </div>
+
+    <!--... other player divs... -->
+
+    <div class="footer">
+        <!--... existing footer... -->
+    </div>
+</body>
+</html>
